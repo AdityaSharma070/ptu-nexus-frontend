@@ -167,6 +167,7 @@ export default function PTUNexusClassroom() {
                 fetchClassroomFiles();
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedClassroom, activeClassroomTab]);
 
     useSmoothRefresh(
