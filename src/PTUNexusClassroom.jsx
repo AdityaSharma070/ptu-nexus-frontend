@@ -17,7 +17,6 @@ import {
     BookOpen,
     FileText,
     BarChart3,
-    ChevronRight,
     TrendingUp,
     Brain,
     Calendar,
