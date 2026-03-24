@@ -960,60 +960,7 @@ export default function PTUNexusClassroom() {
                             </div>
                         </div>
 
-                        {/* Recent Activity */}
-                        <div>
-                            <div className="flex items-center justify-between mb-6">
-                                <h3 className="text-2xl font-light text-gray-900">
-                                    Recent Activity
-                                </h3>
-                                <button className="text-indigo-600 text-sm font-medium hover:text-indigo-700">
-                                    View All
-                                </button>
-                            </div>
-                            <div className="bg-white rounded-2xl border border-gray-200 divide-y divide-gray-100 shadow-sm">
-                                {[
-                                    {
-                                        icon: FileText,
-                                        title: "New assignment posted in Data Structures",
-                                        time: "2 hours ago",
-                                        color: "blue",
-                                    },
-                                    {
-                                        icon: MessageSquare,
-                                        title: "Your doubt was answered in OS class",
-                                        time: "5 hours ago",
-                                        color: "green",
-                                    },
-
-                                    {
-                                        icon: Bell,
-                                        title: "Upcoming: Mid-term exam on March 20th",
-                                        time: "2 days ago",
-                                        color: "amber",
-                                    },
-                                ].map((activity, i) => (
-                                    <div
-                                        key={i}
-                                        className="p-4 hover:bg-gray-50 transition-colors cursor-pointer flex items-center gap-4"
-                                    >
-                                        <div
-                                            className={`w-10 h-10 bg-${activity.color}-50 rounded-lg flex items-center justify-center flex-shrink-0`}
-                                        >
-                                            <activity.icon
-                                                className={`w-5 h-5 text-${activity.color}-600`}
-                                            />
-                                        </div>
-                                        <div className="flex-1">
-                                            <p className="text-gray-900 text-sm font-medium">
-                                                {activity.title}
-                                            </p>
-                                            <p className="text-gray-500 text-xs">{activity.time}</p>
-                                        </div>
-                                        <ChevronRight className="w-5 h-5 text-gray-400" />
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                       
                     </div>
                 )}
 
