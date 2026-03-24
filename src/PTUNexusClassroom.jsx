@@ -18,6 +18,7 @@ import {
     FileText,
     BarChart3,
     TrendingUp,
+
     Calendar,
     Users,
     Bell,
@@ -32,7 +33,7 @@ import {
     Star,
     AlertCircle,
     LogOut,
-    
+
 
     Download,
 
@@ -131,7 +132,7 @@ export default function PTUNexusClassroom() {
         { label: "Total Students", value: "1,200+", icon: Calendar },
     ];
 
-    
+
 
 
     // Fetch classrooms on mount
@@ -656,7 +657,7 @@ export default function PTUNexusClassroom() {
                         </div>
 
                         <div className="flex items-center gap-4">
-                            
+
                             <div className="flex items-center gap-2 px-3 py-2 bg-gray-50 rounded-lg">
                                 <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
                                     {user?.role === "teacher" ? "T" : "S"}
@@ -719,7 +720,7 @@ export default function PTUNexusClassroom() {
                             </div>
                         </div>
 
-                        
+
                         {/* Question Papers Course Cards Grid */}
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
 
@@ -952,7 +953,7 @@ export default function PTUNexusClassroom() {
                             </div>
                         </div>
 
-                       
+
                     </div>
                 )}
 
@@ -1666,7 +1667,12 @@ export default function PTUNexusClassroom() {
                 )}
 
                 {/* ANALYTICS TAB */}
-                
+                {activeTab === "analytics" && (
+                    <div className="flex flex-col items-center justify-center h-96">
+                        <h1 className="text-6xl font-bold text-gray-200">Coming Soon</h1>
+                        <p className="text-gray-400 mt-4 text-lg">Analytics feature is under development</p>
+                    </div>
+                )}
             </div>
 
             {/* MODALS */}
