@@ -581,13 +581,14 @@ export default function PTUNexusClassroom() {
     const handleDownloadFile = async (fileId, fileName) => {
         try {
             const response = await fileAPI.downloadFile(fileId);
-            const url = window.URL.createObjectURL(new Blob([response.data]));
+            const url = window.URL.createObjectURL(new Blob([response.data], { type: 'application/pdf' }));
             const link = document.createElement('a');
             link.href = url;
-            link.setAttribute('download', fileName);
+            link.setAttribute('download', fileName.endsWith('.pdf') ? fileName : fileName + '.pdf');
             document.body.appendChild(link);
             link.click();
             link.remove();
+            window.URL.revokeObjectURL(url);
         } catch (error) {
             console.error('Error downloading file:', error);
             toast.error('Failed to download file');
@@ -2700,13 +2701,14 @@ export default function PTUNexusClassroom() {
                                                     onClick={async () => {
                                                         try {
                                                             const res = await questionPaperAPI.download(paper.id);
-                                                            const url = window.URL.createObjectURL(new Blob([res.data]));
+                                                            const url = window.URL.createObjectURL(new Blob([res.data], { type: 'application/pdf' }));
                                                             const link = document.createElement('a');
                                                             link.href = url;
-                                                            link.setAttribute('download', paper.title);
+                                                            link.setAttribute('download', paper.title + '.pdf');
                                                             document.body.appendChild(link);
                                                             link.click();
                                                             link.remove();
+                                                            window.URL.revokeObjectURL(url);
                                                         } catch (error) {
                                                             toast.error('Download failed');
                                                         }
