@@ -45,10 +45,10 @@ export default function Login() {
   };
 
   const features = [
-    { icon: GraduationCap, title: 'Smart Learning', desc: 'AI-powered study assistance' },
-    { icon: Users, title: 'Interactive Classes', desc: 'Collaborate with peers' },
-    { icon: BarChart3, title: 'Analytics', desc: 'Track your progress' },
-    { icon: Brain, title: 'Topic Insights', desc: 'Exam predictions' },
+    { icon: GraduationCap, title: 'Smart Learning'},
+    { icon: Users, title: 'Interactive Classes'},
+    { icon: BarChart3, title: 'Analytics' },
+    { icon: Brain, title: 'Topic Insights' },
   ];
 
   return (
@@ -85,7 +85,6 @@ export default function Login() {
             <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
               <feature.icon className="w-6 h-6 text-white mb-2" />
               <h3 className="text-white font-medium mb-1">{feature.title}</h3>
-              <p className="text-white/70 text-sm">{feature.desc}</p>
             </div>
           ))}
         </div>
