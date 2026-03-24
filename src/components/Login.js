@@ -74,7 +74,9 @@ export default function Login() {
             <h2 className="text-4xl font-light text-white leading-tight">
               Master Your PTU Exams with Intelligence
             </h2>
-            
+            <p className="text-white/90 text-lg font-light">
+              Classroom Management, PYQs and Doubt Resolution
+            </p>
           </div>
         </div>
 
