@@ -664,10 +664,7 @@ export default function PTUNexusClassroom() {
                         </div>
 
                         <div className="flex items-center gap-4">
-                            <button className="relative p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors">
-                                <Bell className="w-5 h-5" />
-                                <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                            </button>
+                            
                             <div className="flex items-center gap-2 px-3 py-2 bg-gray-50 rounded-lg">
                                 <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
                                     {user?.role === "teacher" ? "T" : "S"}
@@ -730,53 +727,7 @@ export default function PTUNexusClassroom() {
                             </div>
                         </div>
 
-                        {/* Quick Actions */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 border border-blue-200 hover:shadow-lg transition-all cursor-pointer group">
-                                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                    <FileText className="w-6 h-6 text-white" />
-                                </div>
-                                <h3 className="text-lg font-medium text-gray-900 mb-2">
-                                    Question Papers
-                                </h3>
-                                <p className="text-gray-600 text-sm mb-4">
-                                    Browse 500+ past papers with solutions
-                                </p>
-                                <div className="flex items-center text-blue-600 text-sm font-medium">
-                                    Explore <ArrowRight className="w-4 h-4 ml-1" />
-                                </div>
-                            </div>
-
-                            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 border border-purple-200 hover:shadow-lg transition-all cursor-pointer group">
-                                <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                    <MessageSquare className="w-6 h-6 text-white" />
-                                </div>
-                                <h3 className="text-lg font-medium text-gray-900 mb-2">
-                                    Doubt Forum
-                                </h3>
-                                <p className="text-gray-600 text-sm mb-4">
-                                    Ask questions and help others
-                                </p>
-                                <div className="flex items-center text-purple-600 text-sm font-medium">
-                                    Ask Doubt <ArrowRight className="w-4 h-4 ml-1" />
-                                </div>
-                            </div>
-
-                            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 border border-green-200 hover:shadow-lg transition-all cursor-pointer group">
-                                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                    <Brain className="w-6 h-6 text-white" />
-                                </div>
-                                <h3 className="text-lg font-medium text-gray-900 mb-2">
-                                    AI Insights
-                                </h3>
-                                <p className="text-gray-600 text-sm mb-4">
-                                    Get smart study recommendations
-                                </p>
-                                <div className="flex items-center text-green-600 text-sm font-medium">
-                                    View Insights <ArrowRight className="w-4 h-4 ml-1" />
-                                </div>
-                            </div>
-                        </div>
+                        
                         {/* Question Papers Course Cards Grid */}
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
 
