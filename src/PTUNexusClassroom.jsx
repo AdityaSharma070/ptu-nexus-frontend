@@ -34,7 +34,7 @@ import {
     Star,
     AlertCircle,
     LogOut,
-    ArrowRight,
+    
 
     Download,
 
