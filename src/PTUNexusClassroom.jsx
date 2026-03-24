@@ -57,7 +57,6 @@ export default function PTUNexusClassroom() {
     const [doubts, setDoubts] = useState([]);
     const [announcements, setAnnouncements] = useState([]);
     const [students, setStudents] = useState([]);
-    const [selectedDoubtForAnswers, setSelectedDoubtForAnswers] = useState(null);
     const [doubtAnswers, setDoubtAnswers] = useState([]);
     const [showAnswersSection, setShowAnswersSection] = useState({});
     const [showSubmissionsModal, setShowSubmissionsModal] = useState(false);
@@ -72,7 +71,7 @@ export default function PTUNexusClassroom() {
         questionPaperAPI.getAll({ ...qpFilter, search: qpSearch })
             .then(res => setQuestionPapers(res.data.papers))
             .catch(console.error);
-    }, [qpFilter, showQuestionPapersModal]);
+    }, [qpFilter, qpSearch, showQuestionPapersModal]);
     // added PDF stream option
     const [files, setFiles] = useState([]);
     const [showUploadFileModal, setShowUploadFileModal] = useState(false);
@@ -159,6 +158,7 @@ export default function PTUNexusClassroom() {
     );
 
     // Fetch classroom data when selected
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         if (selectedClassroom) {
             fetchClassroomData(false); // false = show loading initially
