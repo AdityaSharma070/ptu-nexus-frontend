@@ -18,7 +18,6 @@ import {
     FileText,
     BarChart3,
     TrendingUp,
-    Brain,
     Calendar,
     Users,
     Bell,
@@ -132,13 +131,7 @@ export default function PTUNexusClassroom() {
         { label: "Total Students", value: "1,200+", icon: Calendar },
     ];
 
-    const topTopics = [
-        { topic: "Binary Search Trees", frequency: 87, trend: "up" },
-        { topic: "Process Scheduling", frequency: 72, trend: "up" },
-        { topic: "Normalization", frequency: 68, trend: "stable" },
-        { topic: "TCP/IP Protocol", frequency: 64, trend: "down" },
-        { topic: "React Hooks", frequency: 45, trend: "up" },
-    ];
+    
 
 
     // Fetch classrooms on mount
